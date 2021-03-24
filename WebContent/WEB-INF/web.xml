@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee"  id="WebApp_ID" version="4.0">
+
+	<context-param>
+	<param-name>mydriver</param-name>
+	<param-value>com.mysql.jdbc.Driver</param-value>
+	</context-param>
+	
+	<context-param>
+	<param-name>url</param-name>
+	<param-value>jdbc:mysql://localhost:3306/testdatabase</param-value>
+	</context-param>
+	
+	<context-param>
+	<param-name>user</param-name>
+	<param-value>root</param-value>
+	</context-param>
+	
+	<context-param>
+	<param-name>pass</param-name>
+	<param-value>root</param-value>
+	</context-param>
+	
+	<!-- Insert Data-->
+	<servlet>
+	<servlet-name>InsertData</servlet-name>
+	<servlet-class>database.InsertData</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>InsertData</servlet-name>
+	<url-pattern>/InsertData</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Display Servlet-->
+	<servlet>
+	<servlet-name>DisplayServlet</servlet-name>
+	<servlet-class>database.DisplayServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>DisplayServlet</servlet-name>
+	<url-pattern>/DisplayServlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Delete Servlet-->
+	<servlet>
+	<servlet-name>DeleteServlet</servlet-name>
+	<servlet-class>database.DeleteServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>DeleteServlet</servlet-name>
+	<url-pattern>/DeleteServlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Update Servlet-->
+	<servlet>
+	<servlet-name>UpdateServlet</servlet-name>
+	<servlet-class>database.UpdateServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>UpdateServlet</servlet-name>
+	<url-pattern>/UpdateServlet</url-pattern>
+	</servlet-mapping>
+	
+</web-app>

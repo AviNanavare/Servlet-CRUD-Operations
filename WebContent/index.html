@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Insert Data</title> 
+</head> 
+<body>
+			<h1>Employee Table - Servlet Example</h1>
+			
+			<h3>Insert Data</h3>
+			<form action="InsertData" method="post" > 
+				Emp_ID : <input type="text" name="id"/> <br>
+				E_Name : <input type="text" name="name"/> <br>
+				EmpAge :	<input type="text" name="age"/> <br>
+				<input type="submit" value="Insert" /> 
+			</form>
+			<br>
+			
+			<h3>View Data</h3>
+			<form action="DisplayServlet" method="get">
+					<input type="submit" value="View" />
+			</form>
+			<br>
+			
+			<h3>Update Data</h3>
+			<form action="UpdateServlet" method="Post">
+					Emp_ID : <input type="text" name="updateId"/> <br>
+					E_Name : <input type="text" name="updateName"/> <br>
+					EmpAge :	<input type="text" name="updateAge"/> <br>
+					<input type="submit" value="Update" />
+			</form>
+			<br>
+			
+			<h3>Delete data</h3>
+			<form action="DeleteServlet" method="Post">
+					<input type="number" name="deleteId">
+					<input type="submit" value="Delete" />
+			</form>
+</body> 
+</html> 
